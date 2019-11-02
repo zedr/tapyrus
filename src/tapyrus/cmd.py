@@ -10,6 +10,8 @@ run_parser.add_argument("path_to_swagger_file", help="Path to Swagger file")
 
 def run(args: argparse.Namespace) -> None:
     document = SwaggerDocument.load(args.path_to_swagger_file)
+    server = WebServer.load(document)
+    server.run()
 
 
 run_parser.set_defaults(func=run)

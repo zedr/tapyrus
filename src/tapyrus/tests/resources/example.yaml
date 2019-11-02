@@ -10,7 +10,7 @@ produces:
 paths:
     /fruits:
         get:
-            operationId: sami.sample.test_view
+            x-tapyrus-handler: tapyrus.tests.example_handlers.get_fruits
             responses:
                 '200':
                     description: 'A list of fruits'

@@ -25,7 +25,7 @@ class SwaggerDocument:
         for key in ("info", "paths", "swagger"):
             if key not in ns:
                 raise exc.NotASwaggerDocumentError(
-                    f"Not a valid Swagger document; missing attribute {key}"
+                    f"Not a valid Swagger document; missing attribute '{key}'"
                 )
 
         version = ns["swagger"]
