@@ -20,7 +20,8 @@ ${SITE_PACKAGES}/poetry:
 deps: ${ENV} ${SITE_PACKAGES}/poetry
 	@${IN_ENV} poetry install
 
-${SITE_PACKAGES}/pytest.py: deps
+${SITE_PACKAGES}/pytest.py:
+	@${IN_ENV} pip install pytest
 
 install: default
 	@${IN_ENV} pip install -e .
