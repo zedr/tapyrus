@@ -1,0 +1,16 @@
+swagger: '2.0'
+info:
+    title: 'New API'
+    description: 'A brand new API with no content.  Go nuts!'
+    version: '1.0'
+consumes:
+    - application/json
+produces:
+    - application/json
+paths:
+    /fruits:
+        get:
+            operationId: sami.sample.test_view
+            responses:
+                '200':
+                    description: 'A list of fruits'
