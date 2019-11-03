@@ -6,7 +6,7 @@ from tapyrus import defaults
 def _load_module(dotted_path: str) -> object:
     """Load a module by its dotted path.
     """
-    module_name, func_name = op_id.rsplit(".", 1)
+    module_name, func_name = dotted_path.rsplit(".", 1)
     module = importlib.import_module(module_name)
     return getattr(module, func_name)
 
